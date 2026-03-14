@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Универсальный Инструментарий</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Универсальный Инструментарий</h1>
+        <p>Ваши повседневные веб-инструменты в одном месте</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#qr-code">QR-код из ссылки</a></li>
+            <li><a href="#sstv">SSTV звук из картинки</a></li>
+            <li><a href="#text-case">Конвертер Регистра</a></li>
+            <li><a href="#image-manipulator">Манипулятор Изображений</a></li>
+            <li><a href="#hash-generator">Генератор Хэшей</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="qr-code" class="tool-section">
+            <h2>QR-код из ссылки</h2>
+            <p>Введите ссылку, чтобы сгенерировать QR-код.</p>
+            <div class="tool-card">
+                <input type="url" id="qr-link-input" placeholder="Введите URL здесь...">
+                <button id="generate-qr-btn">Сгенерировать QR</button>
+                <div id="qr-code-output" class="output-area">
+                    <!-- Заглушка для QR-кода. Для фактической генерации требуется JavaScript. -->
+                    <img src="https://via.placeholder.com/150?text=QR+Code+Placeholder" alt="QR Code Placeholder" style="width: 150px; height: 150px; border: 1px solid #ccc; display: block; margin: 15px auto;">
+                    <p class="note">Для фактической генерации QR-кода требуется JavaScript.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sstv" class="tool-section">
+            <h2>SSTV звук из картинки</h2>
+            <p>Загрузите изображение для преобразования в SSTV-звук.</p>
+            <div class="tool-card">
+                <input type="file" id="sstv-image-input" accept="image/*">
+                <button id="generate-sstv-btn">Сгенерировать SSTV</button>
+                <div id="sstv-output" class="output-area">
+                    <!-- Заглушка для аудио. Для преобразования требуется JavaScript и Web Audio API. -->
+                    <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" style="width: 100%; display: none;"></audio>
+                    <p class="note">Для преобразования изображения в SSTV-звук требуется JavaScript и Web Audio API.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="text-case" class="tool-section">
+            <h2>Конвертер Регистра Текста</h2>
+            <p>Измените регистр вашего текста.</p>
+            <div class="tool-card">
+                <textarea id="text-case-input" placeholder="Введите ваш текст здесь..."></textarea>
+                <div class="button-group">
+                    <button id="to-upper-btn">В ВЕРХНИЙ РЕГИСТР</button>
+                    <button id="to-lower-btn">в нижний регистр</button>
+                    <button id="to-title-btn">В Название Регистра</button>
+                    <button id="to-sentence-btn">В предложение регистра.</button>
+                </div>
+                <textarea id="text-case-output" readonly placeholder="Результат появится здесь..."></textarea>
+                <p class="note">Для конвертации регистра текста требуется JavaScript.</p>
+            </div>
+        </section>
+
+        <section id="image-manipulator" class="tool-section">
+            <h2>Манипулятор Изображений</h2>
+            <p>Изменение размера или формата изображения.</p>
+            <div class="tool-card">
+                <input type="file" id="image-upload-input" accept="image/*">
+                <div class="input-group">
+                    <label for="width-input">Ширина (px):</label>
+                    <input type="number" id="width-input" value="800">
+                </div>
+                <div class="input-group">
+                    <label for="height-input">Высота (px):</label>
+                    <input type="number" id="height-input" value="600">
+                </div>
+                <div class="input-group">
+                    <label for="format-select">Формат:</label>
+                    <select id="format-select">
+                        <option value="jpeg">JPEG</option>
+                        <option value="png">PNG</option>
+                        <option value="webp">WEBP</option>
+                    </select>
+                </div>
+                <button id="process-image-btn">Обработать Изображение</button>
+                <div id="image-output" class="output-area">
+                    <!-- Заглушка для обработанного изображения. Для обработки требуется JavaScript (Canvas API). -->
+                    <img src="https://via.placeholder.com/800x600?text=Processed+Image+Placeholder" alt="Processed Image Placeholder" style="max-width: 100%; height: auto; border: 1px solid #ccc; display: block; margin: 15px auto;">
+                    <p class="note">Для обработки изображений требуется JavaScript (Canvas API).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hash-generator" class="tool-section">
+            <h2>Генератор Хэшей</h2>
+            <p>Сгенерируйте криптографический хэш для вашего текста.</p>
+            <div class="tool-card">
+                <textarea id="hash-input" placeholder="Введите текст для хэширования..."></textarea>
+                <div class="button-group">
+                    <button id="generate-md5-btn">MD5</button>
+                    <button id="generate-sha1-btn">SHA-1</button>
+                    <button id="generate-sha256-btn">SHA-256</button>
+                </div>
+                <input type="text" id="hash-output" readonly placeholder="Хэш появится здесь...">
+                <p class="note">Для генерации хэшей требуется JavaScript (Web Crypto API).</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Универсальный Инструментарий. Все права защищены.</p>
+    </footer>
+</body>
+</html>
