@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #1a1a2e;
+    --text-color: #e0e0e0;
+    --accent-color-1: #ff0080; /* Pink */
+    --accent-color-2: #00ccff; /* Cyan */
+    --accent-color-3: #ffcc00; /* Yellow */
+    --container-bg: rgba(255, 255, 255, 0.1);
+    --button-bg: linear-gradient(90deg, var(--accent-color-1), var(--accent-color-2));
+    --button-shadow: 0 0 20px rgba(0, 204, 255, 0.5), 0 0 40px rgba(255, 0, 128, 0.3);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Hide overflow from animated blobs */
+    position: relative;
+}
+
+/* Background Animated Blobs */
+.background-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Allow interaction with content */
+    z-index: -1;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.7;
+}
+
+.blob-1 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle at center, var(--accent-color-1), transparent 70%);
+    top: 10%;
+    left: 10%;
+    animation: blobAnimation1 20s infinite alternate ease-in-out;
+}
+
+.blob-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle at center, var(--accent-color-2), transparent 70%);
+    bottom: 5%;
+    right: 15%;
+    animation: blobAnimation2 25s infinite alternate ease-in-out;
+}
+
+.blob-3 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle at center, var(--accent-color-3), transparent 70%);
+    top: 30%;
+    right: 5%;
+    animation: blobAnimation3 18s infinite alternate ease-in-out;
+}
+
+@keyframes blobAnimation1 {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(100px, 50px) scale(1.1); }
+    66% { transform: translate(-50px, -100px) scale(0.9); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes blobAnimation2 {
+    0% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(-80px, 120px) scale(1.2); }
+    50% { transform: translate(150px, -70px) scale(0.95); }
+    75% { transform: translate(-100px, -50px) scale(1.1); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes blobAnimation3 {
+    0% { transform: translate(0, 0) scale(1); }
+    40% { transform: translate(-120px, 80px) scale(1.05); }
+    80% { transform: translate(70px, -90px) scale(0.9); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Main Content Container */
+.container {
+    background: var(--container-bg);
+    backdrop-filter: blur(15px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
+    border-radius: 20px;
+    padding: 40px 60px;
+    text-align: center;
+    max-width: 800px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Subtle shadow */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: relative;
+    z-index: 1; /* Ensure container is above blobs */
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 0 15px var(--accent-color-2), 0 0 30px var(--accent-color-1);
+    background: linear-gradient(45deg, var(--accent-color-1), var(--accent-color-2), var(--accent-color-3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback for browsers that don't support background-clip: text */
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.cta-button {
+    background: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--button-shadow);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 204, 255, 0.7), 0 0 60px rgba(255, 0, 128, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 40px;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .blob-1, .blob-2, .blob-3 {
+        width: 200px;
+        height: 200px;
+        filter: blur(70px);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 30px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .blob-1, .blob-2, .blob-3 {
+        width: 150px;
+        height: 150px;
+        filter: blur(50px);
+    }
+}
