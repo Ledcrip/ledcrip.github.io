@@ -3,69 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Рекурсивный Сайт Ахахах!</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="level-1">
-        <h1>Это сайт...</h1>
-        <div class="level-2">
-            <h2>...в котором сайт...</h2>
-            <div class="level-3">
-                <h3>...в котором сайт...</h3>
-                <div class="level-4">
-                    <h4>...в котором сайт...</h4>
-                    <div class="level-5">
-                        <h5>...в котором сайт...</h5>
-                        <div class="level-6">
-                            <h6>...в котором сайт...</h6>
-                            <div class="level-7">
-                                <p>...в котором сайт...</p>
-                                <div class="level-8">
-                                    <p>...в котором сайт...</p>
-                                    <div class="level-9">
-                                        <p>...в котором сайт...</p>
-                                        <div class="level-10">
-                                            <p>...в котором сайт...</p>
-                                            <div class="level-11">
-                                                <p>...в котором сайт...</p>
-                                                <div class="level-12">
-                                                    <p>...в котором сайт...</p>
-                                                    <div class="level-13">
-                                                        <p>...в котором сайт...</p>
-                                                        <div class="level-14">
-                                                            <p>...в котором сайт...</p>
-                                                            <div class="level-15">
-                                                                <p>...в котором сайт...</p>
-                                                                <div class="level-16">
-                                                                    <p>...в котором сайт...</p>
-                                                                    <div class="level-17">
-                                                                        <p>...в котором сайт...</p>
-                                                                        <div class="level-18">
-                                                                            <p>...в котором сайт...</p>
-                                                                            <div class="level-19">
-                                                                                <p>...в котором сайт...</p>
-                                                                                <div class="level-20">
-                                                                                    <p>...в котором сайт! Ахахах!</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+    <title>Оазис Спокойствия: Узоры и Гармония</title>
+    <style>
+        /* Общие стили для расслабляющего фона и шрифтов */
+        body {
+            font-family: 'Georgia', serif; /* Мягкий, классический шрифт для расслабления */
+            background-color: #f0f4f8; /* Очень светлый, спокойный фон */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Чтобы контент начинался сверху */
+            min-height: 100vh;
+            color: #333; /* Темно-серый текст для хорошей читаемости */
+            line-height: 1.6;
+            padding: 20px; /* Отступ от краев страницы */
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5, h6, p {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            font-weight: normal; /* Сделать заголовки менее агрессивными */
+        }
+
+        /* Стили для каждого уровня вложенности */
+        .level-1, .level-2, .level-3, .level-4, .level-5, .level-6, .level-7, .level-8, .level-9, .level-10,
+        .level-11, .level-12, .level-13, .level-14, .level-15, .level-16, .level-17, .level-18, .level-19, .level-20 {
+            border-radius: 15px; /* Скругленные углы для мягкости */
+            padding: 25px;
+            margin: 15px; /* Отступ между уровнями */
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Мягкая тень для глубины */
+            transition: all 0.3s ease-in-out; /* Плавные переходы */
+            max-width: 90%; /* Ограничить ширину для лучшей читаемости */
+            flex-shrink: 0; /* Чтобы внутренние блоки не сжимались */
+            display: flex; /* Для центрирования содержимого внутри */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Цветовая палитра и узоры для каждого уровня */
+        /* Используем градиенты для создания "нарисованных" узоров */
+
+        /* Уровень 1: Нежные облака */
+        .level-1 {
+            background-color: #e0e7ed; /* Светло-голубовато-серый */
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%),
+                              radial-gradient(circle at 90% 80%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            color: #2c3e50;
+        }
+        .level-1 h1 { font-size: 2.5em; color: #4a69bd; }
+
+        /* Уровень 2: Мягкие волны */
+        .level-2 {
+            background-color: #d1d9e0; /* Чуть темнее */
+            background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.08) 2px, transparent 2px, transparent 15px);
+            color: #34495e;
+        }
+        .level-2 h2 { font-size: 2em; color: #5a7bb9; }
+
+        /* Уровень 3: Точечный узор */
+        .level-3 {
+            background-color: #c2cbd1;
+            background-image: radial-gradient(#ffffff20 1px, transparent 1px);
+            background-size: 10px 10px;
+            color: #3b506b;
+        }
+        .level-3 h3 { font-size: 1.8em; color: #6a8cbf; }
+
+        /* Уровень 4: Диагональные линии */
+        .level-4 {
+            background-color: #b3bdc4;
+            background-image: repeating-linear-gradient(-45deg, rgba(255,255,255,0.1) 0px, rgba(255,255,255,0.1) 1px, transparent 1px, transparent 12px);
+            color: #425776;
+        }
+        .level-4 h4 { font-size: 1.6em; color: #7a9cd5; }
+
+        /* Уровень 5: Небольшие квадраты */
+        .level-5 {
+            background-color: #a4afb6;
+            background-image: linear-gradient(90deg, #ffffff10 1px, transparent 1px), linear-gradient(#ffffff10 1px, transparent 1px);
+            background-size: 15px 15px;
+            color: #496181;
+        }
+        .level-5 h5 { font-size: 1.4em; color: #8abceb; }
+
+        /* Уровень 6: Вертикальные полосы */
+        .level-6 {
+            background-color: #95a1a8;
+            background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 10px);
+            color: #50688c;
+        }
+        .level-6 h6 { font-size: 1.2em; color: #9acdf0; }
+
+        /* Уровень 7: Горизонтальные полосы */
+        .level-7 {
+            background-color: #8
