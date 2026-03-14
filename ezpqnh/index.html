@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uxuxx - Профессиональный Веб-Разработчик</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">uxuxx<span class="logo-dot">.dev</span></a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Главная</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Обо мне</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Навыки</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Портфолио</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Открыть меню">
+                <span class="toggle-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-subtitle animate-fade-in-up">Привет, я</p>
+                    <h1 class="hero-title animate-fade-in-up delay-1">uxuxx</h1>
+                    <p class="hero-description animate-fade-in-up delay-2">
+                        Профессиональный веб-разработчик, превращающий идеи в <span class="highlight-text">инновационные</span> и <span class="highlight-text">функциональные</span> цифровые решения.
+                    </p>
+                    <a href="#portfolio" class="btn btn-primary animate-fade-in-up delay-3">Посмотреть мои работы</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <h2 class="section-title animate-scroll">Обо мне</h2>
+                <div class="about-content">
+                    <div class="about-image animate-scroll">
+                        <img src="https://via.placeholder.com/400x400/333333/ffffff?text=uxuxx" alt="Профиль uxuxx">
+                    </div>
+                    <div class="about-text animate-scroll">
+                        <h3>Привет! Я uxuxx, и я люблю создавать вещи для веба.</h3>
+                        <p>
+                            Мой путь в веб-разработке начался несколько лет назад, когда я впервые осознал магию превращения кода в интерактивные и полезные продукты. С тех пор я постоянно совершенствую свои навыки, изучая новые технологии и лучшие практики, чтобы создавать высококачественные, масштабируемые и удобные для пользователя веб-приложения.
+                        </p>
+                        <p>
+                            Я обладаю глубокими знаниями как во фронтенде, так и в бэкенде, что позволяет мне эффективно работать над полным циклом разработки. Моя цель — не просто писать код, а создавать ценность, решать реальные проблемы и приносить пользу через технологии. Я всегда открыт для новых вызовов и возможностей для роста.
+                        </p>
+                        <p>
+                            В свободное время я увлекаюсь чтением технической литературы, игрой на гитаре и изучением новых языков программирования.
+                        </p>
+                        <a href="#contact" class="btn btn-secondary">Связаться со мной</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section section-padding bg-darker">
+            <div class="container">
+                <h2 class="section-title animate-scroll">Мои Навыки</h2>
+                <div class="tabs-container animate-scroll">
+                    <div class="tabs-buttons">
+                        <button class="tab-button active" data-tab="frontend">Frontend</button>
+                        <button class="tab-button" data-tab="backend">Backend</button>
+                        <button class="tab-button" data-tab="tools">Инструменты</button>
+                        <button class="tab-button" data-tab="softskills">Soft Skills</button>
+                    </div>
+                    <div class="tabs-content">
+                        <div id="frontend" class="tab-pane active">
+                            <ul class="skills-list">
+                                <li class="skill-item">HTML5 & CSS3 <span class="skill-level" style="--width:95%;"></span></li>
+                                <li class="skill-item">JavaScript (ES6+) <span class="skill-level" style="--width:90%;"></span></li>
+                                <li class="skill-item">React.js / Next.js <span class="skill-level" style="--width:85%;"></span></li>
+                                <li class="skill-item">Vue.js / Nuxt.js <span class="skill-level" style="--width:75%;"></span></li>
+                                <li class="skill-item">TypeScript <span class="skill-level" style="--width:80%;"></span></li>
+                                <li class="skill-item">Sass / Less / PostCSS <span class="skill-level" style="--width:88%;"></span></li>
+                                <li class="skill-item">Responsive Design <span class="skill-level" style="--width:92%;"></span></li>
+                                <li class="skill-item">UX/UI Principles <span class="skill-level" style="--width:80%;"></span></li>
+                            </ul>
+                        </div>
+                        <div id="backend" class="tab-pane">
+                            <ul class="skills-list">
+                                <li class="skill-item">Node.js / Express.js <span class="skill-level" style="--width:85%;"></span></li>
+                                <li class="skill-item">Python / Django / Flask <span class="skill-level" style="--width:80%;"></span></li>
+                                <li class="skill-item">PHP / Laravel <span class="skill-level" style="--width:70%;"></span></li>
+                                <li class="skill-item">RESTful APIs <span class="skill-level" style="--width:90%;"></span></li>
+                                <li class="skill-item">GraphQL <span class="skill-level" style="--width:70%;"></span></li>
+                                <li class="skill-item">SQL (PostgreSQL, MySQL) <span class="skill-level" style="--width:85%;"></span></li>
+                                <li class="skill-item">NoSQL (MongoDB, Redis) <span class="skill-level" style="--width:78%;"></span></li>
+                                <li class="skill-item">Authentication & Authorization <span class="skill-level" style="--width:85%;"></span></li>
+                            </ul>
+                        </div>
+                        <div id="tools" class="tab-pane">
+                            <ul class="skills-list">
+                                <li class="skill-item">Git / GitHub / GitLab <span class="skill-level" style="--width:95%;"></span></li>
+                                <li class="skill-item">Docker <span class="skill-level" style="--width:75%;"></span></li>
+                                <li class="skill-item">AWS / Google Cloud / Vercel <span class="skill-level" style="--width:70%;"></span></li>
+                                <li class="skill-item">NPM / Yarn <span class="skill-level" style="--width:90%;"></span></li>
+                                <li class="skill-item">Webpack / Vite <span class="skill-level" style="--width:80%;"></span></li>
+                                <li class="skill-item">Jira / Trello <span class="skill-level" style="--width:85%;"></span></li>
+                                <li class="skill-item">Figma / Adobe XD <span class="skill-level" style="--width:70%;"></span></li>
+                                <li class="skill-item">VS Code <span class="skill-level" style="--width:98%;"></span></li>
+                            </ul>
+                        </div>
+                        <div id="softskills" class="tab-pane">
+                            <ul class="skills-list">
+                                <li class="skill-item">Решение проблем <span class="skill-level" style="--width:90%;"></span></li>
+                                <li class="skill-item">Командная работа <span class="skill-level" style="--width:88%;"></span></li>
+                                <li class="skill-item">Адаптивность <span class="skill-level" style="--width:92%;"></span></li>
+                                <li class="skill-item">Самообучение <span class="skill-level" style="--width:95%;"></span></li>
+                                <li class="skill-item">Коммуникация <span class="skill-level" style="--width:85%;"></span></li>
+                                <li class="skill-item">Тайм-менеджмент <span class="skill-level" style="--width:80%;"></span></li>
+                                <li class="skill-item">Внимание к деталям <span class="skill-level" style="--width:90%;"></span></li>
+                                <li class="skill-item">Критическое мышление <span class="skill-level" style="--width:87%;"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section section-padding">
+            <div class="container">
+                <h2 class="section-title animate-scroll">Мое Портфолио</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-card animate-scroll">
+                        <img src="https://via.placeholder.com/600x400/555555/ffffff?text=Проект+1" alt="Проект 1">
+                        <div class="card-content">
+                            <h3>E-commerce платформа</h3>
+                            <p>Полнофункциональный интернет-магазин с системой управления заказами и платежным шлюзом.</p>
+                            <a href="#" class="btn btn-outline" target="_blank">Подробнее <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card animate-scroll">
+                        <img src="https://via.placeholder.com/600x400/555555/ffffff?text=Проект+2" alt="Проект 2">
+                        <div class="card-content">
+                            <h3>SaaS для управления проектами</h3>
+                            <p>Веб-приложение для отслеживания задач, командной работы и управления ресурсами.</p>
+                            <a href="#" class="btn btn-outline" target="_blank">Подробнее <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card animate-scroll">
+                        <img src="https://via.placeholder.com/600x400/555555/ffffff?text=Проект+3" alt="Проект 3">
+                        <div class="card-content">
+                            <h3>Блог на React & GraphQL</h3>
+                            <p>Современный блог с динамическим контентом, быстрой загрузкой и SEO-оптимизацией.</p>
+                            <a href="#" class="btn btn-outline" target="_blank">Подробнее <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card animate-scroll">
+                        <img src="https://via.placeholder.com/600x400/555555/ffffff?text=Проект+4" alt="Проект 4">
+                        <div class="card-content">
+                            <h3>Мобильное-ориентированное приложение</h3>
+                            <p>Адаптивный дизайн и оптимизация производительности для мобильных устройств.</p>
+                            <a href="#" class="btn btn-outline" target="_blank">Подробнее <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card animate-scroll">
+                        <img src="https://via.placeholder.com/600x400/555555/ffffff?text=Проект+5" alt="Проект 5">
+                        <div class="card-content">
+                            <h3>API для сервиса погоды</h3>
+                            <p>Разработка и документирование RESTful API для получения данных о погоде.</p>
+                            <a href="#" class="btn btn-outline" target="_blank">Подробнее <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card animate-scroll">
+                        <img src="https://via.placeholder.com/600x400/555555/ffffff?text=Проект+6" alt="Проект 6">
+                        <div class="card-content">
+                            <h3>Инструмент для визуализации данных</h3>
+                            <p>Интерактивные графики и дашборды для анализа больших объемов данных.</p>
+                            <a href="#" class="btn btn-outline" target="_blank">Подробнее <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section section-padding bg-darker">
+            <div class="container">
+                <h2 class="section-title animate-scroll">Связаться со мной</h2>
+                <div class="contact-content">
+                    <div class="contact-form animate-scroll">
+                        <h3>Отправить сообщение</h3>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Ваше имя</label>
+                                <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Ваш Email</label>
+                                <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Тема</label>
+                                <input type="text" id="subject" name="subject" placeholder="Тема сообщения">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Ваше сообщение..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">Отправить сообщение <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                    <div class="contact-info animate-scroll">
+                        <h3>Мои контакты</h3>
+                        <p><i class="fas fa-envelope icon-contact"></i> <a href="mailto:uxuxx@example.com">uxuxx@example.com</a></p>
+                        <p><i class="fas fa-phone-alt icon-contact"></i> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                        <p><i class="fas fa-map-marker-alt icon-contact"></i> Город, Страна</p>
+                        <div class="social-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 uxuxx.dev. Все права защищены.</p>
+            <div class="footer-links">
+                <a href="#home">Главная</a>
+                <a href="#about">Обо мне</a>
+                <a href="#contact">Контакты</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile nav if open
+                if (document.body.classList.contains('nav-open')) {
+                    document.body.classList.remove('nav-open');
+                }
+            });
+        });
+
+        // Sticky header and active nav link on scroll
+        const header = document.querySelector('.header');
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            // Sticky header
+            if (window.scrollY > 50) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+
+            // Active nav link
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.href.includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        navToggle.addEventListener('click', () => {
+            document.body.classList.toggle('nav-open');
+        });
+
+        // Tabs functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Deactivate all buttons and panes
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+
+                // Activate clicked button
+                button.classList.add('active');
+
+                // Activate corresponding pane
+                const targetTab = button.dataset.tab;
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+
+        // Scroll animation for elements
+        const animateOnScrollElements = document.querySelectorAll('.animate-scroll');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, observerOptions);
+
+        animateOnScrollElements.forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animate skill bars on tab click
+        const skillsListItems = document.querySelectorAll('.skills-list .skill-item');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.dataset.tab;
+                const activePane = document.getElementById(targetTab);
+                
+                // Reset animation for all skill levels
+                document.querySelectorAll('.skill-level').forEach(level => {
+                    level.style.width = '0';
+                    level.style.transition = 'none'; // Temporarily disable transition
+                });
+
+                // Trigger reflow to ensure reset is applied
+                void activePane.offsetWidth; 
+
+                // Animate skill levels in the active tab
+                activePane.querySelectorAll('.skill-item').forEach(item => {
+                    const skillLevel = item.querySelector('.skill-level');
+                    if (skillLevel) {
+                        const width = skillLevel.style.getPropertyValue('--width');
+                        skillLevel.style.transition = 'width 1s ease-out'; // Re-enable transition
+                        skillLevel.style.width = width;
+                    }
+                });
+            });
+        });
+
+        // Initial animation for the first tab
+        document.addEventListener('DOMContentLoaded', () => {
+             document.querySelector('.tab-button.active').click(); // Simulate click on active tab to animate skills
+        });
+
+    </script>
+</body>
+</html>
