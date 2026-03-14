@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uxuxx - Professional Web Developer</title>
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to our custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <a href="#home" class="logo">uxuxx</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <p class="hero-greeting animate-fade-in">Hello, I'm</p>
+            <h1 class="hero-title animate-slide-up">uxuxx</h1>
+            <p class="hero-tagline animate-fade-in-delay">Crafting modern web experiences with precision and passion.</p>
+            <div class="hero-buttons animate-fade-in-delay-more">
+                <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-me section-padding reveal-on-scroll">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- Placeholder image, could be a profile picture -->
+                    <img src="https://via.placeholder.com/300x300/6A1B9A/ffffff?text=uxuxx" alt="uxuxx Profile">
+                </div>
+                <div class="about-text">
+                    <p>I am uxuxx, a dedicated web developer with a strong passion for creating intuitive and dynamic digital solutions. With expertise in front-end and back-end technologies, I specialize in building responsive, user-friendly, and high-performance websites and applications.</p>
+                    <p>My journey in web development began with a curiosity for how things work online, evolving into a career focused on turning complex ideas into elegant code. I thrive on challenges and continuously seek to learn new technologies to deliver cutting-edge results that make an impact.</p>
+                    <p>Whether it's a complex web application, a sleek marketing site, or optimizing an existing platform, I bring a meticulous approach and a creative mindset to every project. Let's build something amazing together!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section with Tabs -->
+    <section id="skills" class="skills-section section-padding reveal-on-scroll">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="frontend">Frontend</button>
+                <button class="tab-button" data-tab="backend">Backend</button>
+                <button class="tab-button" data-tab="tools">Tools & Concepts</button>
+            </div>
+
+            <div class="tab-content active" id="frontend">
+                <div class="skill-grid">
+                    <div class="skill-item"><i class="fab fa-html5 skill-icon"></i> HTML5</div>
+                    <div class="skill-item"><i class="fab fa-css3-alt skill-icon"></i> CSS3 (Sass, Less)</div>
+                    <div class="skill-item"><i class="fab fa-js-square skill-icon"></i> JavaScript (ES6+)</div>
+                    <div class="skill-item"><i class="fab fa-react skill-icon"></i> React.js</div>
+                    <div class="skill-item"><i class="fab fa-vuejs skill-icon"></i> Vue.js</div>
+                    <div class="skill-item"><i class="fas fa-mobile-alt skill-icon"></i> Responsive Design</div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="backend">
+                <div class="skill-grid">
+                    <div class="skill-item"><i class="fab fa-node-js skill-icon"></i> Node.js</div>
+                    <div class="skill-item"><i class="fas fa-server skill-icon"></i> Express.js</div>
+                    <div class="skill-item"><i class="fab fa-python skill-icon"></i> Python (Django, Flask)</div>
+                    <div class="skill-item"><i class="fab fa-php skill-icon"></i> PHP (Laravel)</div>
+                    <div class="skill-item"><i class="fas fa-database skill-icon"></i> SQL (PostgreSQL, MySQL)</div>
+                    <div class="skill-item"><i class="fas fa-database skill-icon"></i> NoSQL (MongoDB)</div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tools">
+                <div class="skill-grid">
+                    <div class="skill-item"><i class="fab fa-git-alt skill-icon"></i> Git & GitHub</div>
+                    <div class="skill-item"><i class="fab fa-docker skill-icon"></i> Docker</div>
+                    <div class="skill-item"><i class="fab fa-aws skill-icon"></i> AWS</div>
+                    <div class="skill-item"><i class="fas fa-wrench skill-icon"></i> Webpack & Babel</div>
+                    <div class="skill-item"><i class="fas fa-exchange-alt skill-icon"></i> RESTful APIs</div>
+                    <div class="skill-item"><i class="fas fa-project-diagram skill-icon"></i> Agile Methodologies</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section section-padding reveal-on-scroll">
+        <div class="container">
+            <h2 class="section-title">My Latest Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x250/333/fff?text=Project+1" alt="E-commerce Platform">
+                    <h3>E-commerce Platform</h3>
+                    <p>A full-stack e-commerce solution with user authentication, product management, and secure payment integration.</p>
+                    <a href="#" class="btn btn-small">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x250/444/fff?text=Project+2" alt="Task Management App">
+                    <h3>Task Management App</h3>
+                    <p>A responsive task management application built with React, featuring real-time updates and drag-and-drop functionality.</p>
+                    <a href="#" class="btn btn-small">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x250/555/fff?text=Project+3" alt="Blog Content Management">
+                    <h3>Blog CMS</h3>
+                    <p>A custom content management system for blogging with an intuitive admin panel and rich text editor capabilities.</p>
+                    <a href="#" class="btn btn-small">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x250/666/fff?text=Project+4" alt="Social Media Dashboard">
+                    <h3>Social Media Dashboard</h3>
+                    <p>An interactive dashboard to monitor social media analytics and schedule posts across multiple platforms.</p>
+                    <a href="#" class="btn btn-small">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding reveal-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-intro">Have a project in mind, a question, or just want to say hello? Feel free to reach out!</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email Address">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-send">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 uxuxx. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                if (document.body.classList.contains('nav-open')) {
+                    document.body.classList.remove('nav-open');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        menuToggle.addEventListener('click', () => {
+            document.body.classList.toggle('nav-open');
+        });
+
+        // Tab functionality for skills section
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Deactivate all buttons and hide all content
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Activate clicked button and show corresponding content
+                button.classList.add('active');
+                const targetTab = document.getElementById(button.dataset.tab);
+                if (targetTab) {
+                    targetTab.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal-on-scroll');
+        const options = {
+            threshold: 0.15 // Trigger when 15% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Stop observing once revealed
+                }
+            });
+        }, options);
+
+        revealElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Sticky header on scroll
+        const header = document.querySelector('.main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // Adjust scroll threshold as needed
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+    </script>
+
+</body>
+</html>
