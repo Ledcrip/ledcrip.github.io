@@ -1,0 +1,33 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f7f6; /* Светло-серый фон */
+    color: #333; /* Темный текст */
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff; /* Белый фон для контейнера */
+    padding: 40px 60px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+    max-width: 500px;
+    width: 90%;
+}
+
+h1 {
+    color: #2c3e50; /* Темно-синий заголовок */
+    font-size: 3em;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+p {
+    color: #555;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
