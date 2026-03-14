@@ -1,0 +1,232 @@
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #333;
+    --primary-color: #007bff;
+    --error-color: #dc3545;
+    --error-bg: #fff;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --code-color: #e83e8c;
+    --code-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--error-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    padding: 40px;
+    border: 1px solid var(--border-color);
+}
+
+header h1 {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3em;
+    color: var(--error-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.error-box {
+    background-color: var(--code-bg);
+    border: 2px solid var(--error-color);
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Ensure content is above pseudo-element */
+}
+
+.error-box::before {
+    content: 'ERROR';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 6em;
+    font-weight: 700;
+    color: rgba(220, 53, 69, 0.05); /* Very light error color for background */
+    z-index: 0;
+    pointer-events: none;
+    font-family: 'Source Code Pro', monospace;
+    transform: rotate(5deg);
+}
+
+.error-box h2 {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2.2em;
+    color: var(--error-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+}
+
+.error-box p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.error-box ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.error-box ul li {
+    font-size: 1em;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.error-box ul li::before {
+    content: '•'; /* Bullet point */
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    line-height: 1;
+    top: 0;
+}
+
+.error-code {
+    background-color: var(--code-bg);
+    border: 1px dashed var(--border-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+    color: var(--text-color);
+    display: inline-block;
+    max-width: 100%;
+    word-break: break-all;
+    position: relative;
+    z-index: 1;
+}
+
+.error-code span:first-child {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.error-code span:last-child {
+    color: var(--code-color);
+    font-weight: 400;
+}
+
+.humor-line {
+    font-style: italic;
+    color: #6c757d;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #6c757d;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .error-box h2 {
+        font-size: 1.8em;
+    }
+
+    .error-box::before {
+        font-size: 4em;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 20px 15px;
+        border-radius: 8px;
+    }
+    header h1 {
+        font-size: 2em;
+        letter-spacing: 1px;
+    }
+    .error-box h2 {
+        font-size: 1.5em;
+    }
+    .error-box p, .error-box ul li {
+        font-size: 0.95em;
+    }
+    .button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    footer {
+        font-size: 0.8em;
+    }
+    .error-box::before {
+        font-size: 3em;
+        top: 0px;
+        right: 0px;
+    }
+}
