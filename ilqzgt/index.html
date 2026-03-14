@@ -4,7 +4,341 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Универсальный Инструментарий</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Общие стили */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --accent-color: #28a745;
+            --background-light: #f8f9fa;
+            --background-dark: #343a40;
+            --text-color: #333;
+            --text-color-light: #f8f9fa;
+            --card-background: #ffffff;
+            --border-color: #e9ecef;
+            --shadow-light: rgba(0, 0, 0, 0.05);
+            --shadow-medium: rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+        }
+
+        /* Хедер */
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px var(--shadow-medium);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Навигация */
+        nav {
+            background-color: var(--background-dark);
+            padding: 0.8rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px var(--shadow-medium);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: var(--text-color-light);
+            text-decoration: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: 500;
+            white-space: nowrap; /* Предотвращает перенос текста в пунктах меню */
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
+        }
+
+        /* Основной контент */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Секции инструментов */
+        .tool-section {
+            background-color: var(--card-background);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            border: 1px solid var(--border-color);
+        }
+
+        .tool-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            position: relative;
+        }
+        .tool-section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .tool-section > p {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+        }
+
+        /* Карточки инструментов */
+        .tool-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            padding: 1.5rem;
+            border: 1px dashed var(--border-color);
+            border-radius: 8px;
+            background-color: var(--background-light);
+        }
+
+        /* Элементы формы: input, textarea, select */
+        input[type="url"],
+        input[type="file"],
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+            color: var(--text-color);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="file"] {
+            padding: 0.5rem 1rem; /* Adjust padding for file input */
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.1);
+            outline: none;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Кнопки */
+        button {
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* Группы кнопок */
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .button-group button {
+            flex: 1 1 auto; /* Allows buttons to grow and shrink */
+            min-width: 150px; /* Ensures buttons don't get too small */
+        }
+
+        /* Группы ввода с лейблами */
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        /* Область вывода */
+        .output-area {
+            background-color: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .output-area img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            margin: 0 auto; /* Center image within flex container */
+            display: block; /* Ensure it behaves like a block element */
+        }
+
+        .output-area audio {
+            width: 100%;
+            max-width: 400px; /* Limit audio player width */
+            margin: 0 auto;
+        }
+
+        .output-area input[type="text"] {
+            text-align: center;
+            background-color: var(--background-light);
+            cursor: text;
+        }
+
+        /* Заметки */
+        .note {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* Футер */
+        footer {
+            background-color: var(--background-dark);
+            color: var(--text-color-light);
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+            nav a {
+                width: 90%;
+                text-align: center;
+            }
+            main {
+                margin: 1.5rem auto;
+                padding: 0 1rem;
+            }
+            .tool-section {
+                padding: 1.5rem;
+            }
+            .tool-section h2 {
+                font-size: 1.7rem;
+            }
+            .tool-card {
+                padding: 1rem;
+            }
+            .button-group {
+                flex-direction: column;
+            }
+            .button-group button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .tool-section {
+                padding: 1rem;
+            }
+            .tool-section h2 {
+                font-size: 1.5rem;
+            }
+            .tool-section > p {
+                font-size: 0.95rem;
+            }
+            input, textarea, select, button {
+                font-size: 0.9rem;
+                padding: 0.7rem 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -31,7 +365,7 @@
                 <button id="generate-qr-btn">Сгенерировать QR</button>
                 <div id="qr-code-output" class="output-area">
                     <!-- Заглушка для QR-кода. Для фактической генерации требуется JavaScript. -->
-                    <img src="https://via.placeholder.com/150?text=QR+Code+Placeholder" alt="QR Code Placeholder" style="width: 150px; height: 150px; border: 1px solid #ccc; display: block; margin: 15px auto;">
+                    <img src="https://via.placeholder.com/150?text=QR+Code+Placeholder" alt="QR Code Placeholder" style="width: 150px; height: 150px; border: 1px solid #ccc;">
                     <p class="note">Для фактической генерации QR-кода требуется JavaScript.</p>
                 </div>
             </div>
@@ -91,7 +425,7 @@
                 <button id="process-image-btn">Обработать Изображение</button>
                 <div id="image-output" class="output-area">
                     <!-- Заглушка для обработанного изображения. Для обработки требуется JavaScript (Canvas API). -->
-                    <img src="https://via.placeholder.com/800x600?text=Processed+Image+Placeholder" alt="Processed Image Placeholder" style="max-width: 100%; height: auto; border: 1px solid #ccc; display: block; margin: 15px auto;">
+                    <img src="https://via.placeholder.com/800x600?text=Processed+Image+Placeholder" alt="Processed Image Placeholder">
                     <p class="note">Для обработки изображений требуется JavaScript (Canvas API).</p>
                 </div>
             </div>
