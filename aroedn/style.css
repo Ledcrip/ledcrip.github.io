@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --primary-color: #3498db; /* Blue */
+    --secondary-color: #2c3e50; /* Dark Blue */
+    --accent-color: #e74c3c; /* Red */
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --dark-bg: #ecf0f1;
+    --border-color: #ddd;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px var(--shadow-medium);
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 40px 0;
+}
+
+/* Search Section */
+.search-section {
+    padding: 40px 0;
+    background-color: var(--dark-bg);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto 15px;
+}
+
+#searchInput {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    font-size: 1.1em;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px var(--shadow-light);
+}
+
+#searchInput::placeholder {
+    color: #888;
+}
+
+#searchInput:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.4);
+}
+
+#searchButton {
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+#searchButton:hover {
+    background-color: #2980b9; /* Darker blue */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--shadow-medium);
+}
+
+#searchButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+.search-tip {
+    font-size: 0.95em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Results Section */
+.results-section {
+    padding: 40px 0;
+}
+
+.results-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.results-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+#searchResults {
+    display: grid;
+    gap: 25px;
+}
+
+.result-item {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 12px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+.result-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.result-item h3 a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.result-item h3 a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.result-item .snippet {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.result-item .link-url {
+    display: block;
+    font-size: 0.9em;
+    color: #777;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.result-item .link-url:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.no-results {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+    margin-top: auto; /* Pushes footer to the bottom */
+    box-shadow: 0 -4px 10px var(--shadow-medium);
+}
+
+footer p {
+    opacity: 0.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .search-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #searchInput {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+
+    #searchButton {
+        width: 100%;
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .results-section h2 {
+        font-size: 1.8em;
+    }
+
+    .result-item {
+        padding: 20px;
+    }
+
+    .result-item h3 {
+        font-size: 1.3em;
+    }
+
+    .result-item .snippet {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .search-section, .results-section {
+        padding: 25px 0;
+    }
+
+    .results-section h2 {
+        font-size: 1.5em;
+    }
+
+    .result-item h3 {
+        font-size: 1.2em;
+    }
+
+    .result-item .snippet {
+        font-size: 0.9em;
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
+}
