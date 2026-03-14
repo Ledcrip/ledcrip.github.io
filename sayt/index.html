@@ -1,0 +1,291 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ledcrip | Портфолио Дизайнера</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>⚡</text></svg>" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">ledcrip<span>.</span>design</a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="active">Главная</a></li>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+                <h1>Привет, я <span>ledcrip</span><br>Ваш Дизайнер Цифровой Эстетики</h1>
+                <p>Я создаю захватывающие и функциональные веб-сайты и цифровые продукты, которые выделяются на фоне конкурентов.</p>
+                <div class="hero-actions">
+                    <a href="#portfolio" class="btn btn-primary">Посмотреть Портфолио</a>
+                    <a href="#contact" class="btn btn-secondary">Связаться со мной</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Обо мне</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://via.placeholder.com/400x450/eeeeee/333333?text=ledcrip+Designer" alt="ledcrip - Дизайнер">
+                    </div>
+                    <div class="about-text">
+                        <h3>Привет! Я ledcrip — креативный и страстный дизайнер.</h3>
+                        <p>С многолетним опытом работы в индустрии дизайна, я специализируюсь на создании интуитивно понятных пользовательских интерфейсов (UI), захватывающего пользовательского опыта (UX) и мощных брендовых идентичностей. Моя цель — превращать сложные идеи в простые, красивые и эффективные цифровые решения.</p>
+                        <p>Я верю, что хороший дизайн — это не только о внешнем виде, но и о функциональности, доступности и способности решать реальные проблемы пользователей. Давайте вместе создадим что-то выдающееся!</p>
+                        <h4 style="margin-top: 2rem;">Мои навыки:</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item">UI/UX Дизайн</div>
+                            <div class="skill-item">Веб-дизайн</div>
+                            <div class="skill-item">Мобильные Приложения</div>
+                            <div class="skill-item">Брендинг</div>
+                            <div class="skill-item">Прототипирование</div>
+                            <div class="skill-item">Figma</div>
+                            <div class="skill-item">Adobe XD</div>
+                            <div class="skill-item">Photoshop</div>
+                        </div>
+                        <a href="#" class="btn btn-secondary" style="margin-top: 2.5rem;"><i class="fas icon-download"></i> Скачать резюме</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Мои Услуги</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas icon-star"></i>
+                        <h3>UI/UX Дизайн</h3>
+                        <p>Разработка интуитивно понятных интерфейсов и оптимального пользовательского опыта для ваших цифровых продуктов.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas icon-laptop-code"></i>
+                        <h3>Веб-дизайн</h3>
+                        <p>Создание современных и адаптивных веб-сайтов, которые привлекают внимание и эффективно работают на всех устройствах.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas icon-palette"></i>
+                        <h3>Брендинг & Идентичность</h3>
+                        <p>Разработка уникального визуального стиля и сильного бренда, который будет выделять вас на рынке.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas icon-lightbulb"></i>
+                        <h3>Консалтинг</h3>
+                        <p>Экспертные консультации по улучшению дизайна, пользовательского опыта и цифровой стратегии.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2 class="section-title">Мое Портфолио</h2>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Все Проекты</button>
+                    <button class="filter-btn" data-filter="uiux">UI/UX Дизайн</button>
+                    <button class="filter-btn" data-filter="web">Веб-дизайн</button>
+                    <button class="filter-btn" data-filter="branding">Брендинг</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item branding">
+                        <img src="https://via.placeholder.com/400x220/c2e0ff/333333?text=Бренд+Лого" alt="Бренд Логотип">
+                        <div class="portfolio-info">
+                            <h3>Логотип & Идентичность "TechConnect"</h3>
+                            <p>Разработка комплексного бренда для технологического стартапа.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item uiux web">
+                        <img src="https://via.placeholder.com/400x220/ffd700/333333?text=Приложение+UX" alt="Приложение UX">
+                        <div class="portfolio-info">
+                            <h3>Дизайн Приложения "EcoTracker"</h3>
+                            <p>UX/UI дизайн мобильного приложения для отслеживания экологического следа.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item web">
+                        <img src="https://via.placeholder.com/400x220/a9e2d3/333333?text=Вебсайт+Адаптивный" alt="Вебсайт Адаптивный">
+                        <div class="portfolio-info">
+                            <h3>Адаптивный Веб-сайт "Gastronomy Hub"</h3>
+                            <p>Дизайн и разработка адаптивного сайта-каталога ресторанов.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item uiux">
+                        <img src="https://via.placeholder.com/400x220/e0c2ff/333333?text=Панель+Управления" alt="Панель Управления">
+                        <div class="portfolio-info">
+                            <h3>Панель Управления "Analytics Pro"</h3>
+                            <p>Создание интуитивно понятной панели управления для аналитической платформы.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item branding web">
+                        <img src="https://via.placeholder.com/400x220/ffc2c2/333333?text=Сайт+Портфолио" alt="Сайт Портфолио">
+                        <div class="portfolio-info">
+                            <h3>Личный Сайт-Портфолио "ArtCanvas"</h3>
+                            <p>Разработка уникального сайта-портфолио для художника.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item uiux branding">
+                        <img src="https://via.placeholder.com/400x220/c2ffd7/333333?text=Мобильное+Приложение" alt="Мобильное Приложение">
+                        <div class="portfolio-info">
+                            <h3>Дизайн Мобильного Банкинга "SafeBank"</h3>
+                            <p>Разработка удобного и безопасного мобильного приложения для банка.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Связаться со мной</h2>
+                <div class="contact-content">
+                    <div class="contact-form-container">
+                        <form class="contact-form" action="#" method="POST"> <!-- In a real project, this would send data to a backend -->
+                            <h3>Напишите мне сообщение</h3>
+                            <div class="form-group">
+                                <label for="name"><i class="fas icon-user"></i> Ваше Имя:</label>
+                                <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fas icon-envelope"></i> Ваш Email:</label>
+                                <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message"><i class="fas icon-cogs"></i> Ваше Сообщение:</label>
+                                <textarea id="message" name="message" placeholder="Опишите ваш проект или задайте вопрос" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Отправить Сообщение</button>
+                        </form>
+                    </div>
+                    <div class="contact-info-container">
+                        <h3>Мои Контакты</h3>
+                        <div class="contact-item">
+                            <i class="fas icon-envelope"></i>
+                            <p>Email:</p>
+                            <a href="mailto:info@ledcrip.design">info@ledcrip.design</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas icon-phone"></i>
+                            <p>Телефон:</p>
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas icon-map-marker-alt"></i>
+                            <p>Адрес:</p>
+                            <p>123 Дизайн Стрит, Креатив Сити, ЦС</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" target="_blank" class="social-link"><i class="fab icon-linkedin"></i></a>
+                            <a href="#" target="_blank" class="social-link"><i class="fab icon-behance"></i></a>
+                            <a href="#" target="_blank" class="social-link"><i class="fab icon-dribbble"></i></a>
+                            <a href="#" target="_blank" class="social-link"><i class="fab icon-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 ledcrip. Все права защищены.</p>
+            <p>Дизайн и разработка от <a href="#">ledcrip</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Update active link class
+                document.querySelectorAll('.nav-menu a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Optional: Intersection Observer for animating sections on scroll (requires JS)
+        // This is a basic example, full implementation would be more complex for custom animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const sections = document.querySelectorAll('section');
+
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeIn 1s ease-out forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            section.style.opacity = '0'; // Hide initially
+            sectionObserver.observe(section);
+        });
+
+        // Portfolio filtering (requires JS)
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelector('.filter-btn.active').classList.remove('active');
+                    btn.classList.add('active');
+
+                    const filter = btn.dataset.filter;
+
+                    portfolioItems.forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 50); // Small delay for fade in effect
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300); // Hide after fade out
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+```
