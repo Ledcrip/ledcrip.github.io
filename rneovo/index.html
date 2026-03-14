@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <div class="input-section">
+            <input type="url" id="urlInput" placeholder="Enter URL here..." required>
+            <button id="generateBtn">Generate QR Code</button>
+        </div>
+        <div class="qr-code-section">
+            <canvas id="qrCodeCanvas"></canvas>
+            <p id="qrPlaceholder">Enter a URL and click 'Generate' to create your QR code.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+    <script>
+        const urlInput = document.getElementById('urlInput');
+        const generateBtn = document.getElementById('generateBtn');
+        const qrCodeCanvas = document.getElementById('qrCodeCanvas');
+        const qrPlaceholder = document.getElementById('qrPlaceholder');
+
+        // Initialize QRious. We'll set the value later.
+        const qrious = new QRious({
+            element: qrCodeCanvas,
+            size: 200, // Default size for the QR code
+            value: ' ' // A non-empty string to avoid initial errors, but effectively blank
+        });
+
+        // Function to update QR code visibility
+        function updateQrDisplay(showCanvas) {
+            if (showCanvas) {
+                qrPlaceholder.style.display = 'none';
+                qrCodeCanvas.style.display = 'block';
+            } else {
+                qrPlaceholder.style.display = 'block';
+                qrCodeCanvas.style.display = 'none';
+            }
+        }
+
+        generateBtn.addEventListener('click', () => {
+            const url = urlInput.value.trim();
+
+            if (url) {
+                qrious.value = url; // Update QR code value
+                updateQrDisplay(true); // Show the canvas
+            } else {
+                qrPlaceholder.textContent = 'Please enter a valid URL to generate a QR code.';
+                updateQrDisplay(false); // Hide canvas, show placeholder with error
+            }
+        });
+
+        // Initial state: hide canvas, show placeholder
+        updateQrDisplay(false);
+    </script>
+</body>
+</html>
