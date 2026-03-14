@@ -1,0 +1,221 @@
+/* General styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212; /* Darker background */
+    color: #e0e0e0; /* Light text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px 40px;
+    background-color: #1e1e1e; /* Slightly lighter than body for contrast */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+    border: 1px solid #333;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    font-family: 'Roboto Mono', monospace; /* Monospace for a distinct, edgy feel */
+    font-size: 3.8em; /* Larger heading */
+    color: #e74c3c; /* Blood red */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(231, 76, 60, 0.6); /* Subtle glow */
+}
+
+/* Main content sections */
+.bio-section {
+    margin-bottom: 40px;
+}
+
+.bio-section p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.tagline {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2em;
+    color: #bbb;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.hashtag {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1em;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+/* Contact Info */
+.contact-info {
+    background-color: #2a2a2a;
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 5px solid #e74c3c; /* Accent border */
+}
+
+.contact-info h2 {
+    font-size: 1.8em;
+    color: #e0e0e0;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #444;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* Links */
+a {
+    color: #e74c3c;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #ff6b6b; /* Lighter red on hover */
+    text-decoration: underline;
+}
+
+/* Milestones */
+.milestones {
+    background-color: #2a2a2a;
+    padding: 20px 25px;
+    border-radius: 8px;
+    border-right: 5px solid #e74c3c; /* Accent border */
+}
+
+.milestones h2 {
+    font-size: 1.8em;
+    color: #e0e0e0;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #444;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.milestones ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.milestones li {
+    background-color: #333;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.milestones li:hover {
+    transform: translateX(5px);
+    background-color: #3a3a3a;
+}
+
+.milestones .date {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0; /* Prevent date from shrinking */
+}
+
+.milestones .event {
+    color: #ccc;
+    flex-grow: 1; /* Allow event text to take remaining space */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px 25px;
+    }
+
+    header h1 {
+        font-size: 2.8em;
+        letter-spacing: 2px;
+    }
+
+    .contact-info h2,
+    .milestones h2 {
+        font-size: 1.5em;
+    }
+
+    .milestones li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 12px;
+    }
+
+    .milestones .date {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+        letter-spacing: 1px;
+    }
+
+    .bio-section p {
+        font-size: 1em;
+    }
+
+    .tagline, .hashtag {
+        font-size: 1em;
+    }
+}
