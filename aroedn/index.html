@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛингвоПоиск - Ваш Путеводитель по Текстам</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ЛингвоПоиск</h1>
+            <p>Находите нужные статьи, тексты и определения по всему интернету</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <div class="container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Например: деепричастия, наречия, синтаксис русского языка, квантовая физика...">
+                    <button id="searchButton">Искать</button>
+                </div>
+                <p class="search-tip">Введите ключевые слова или фразы для поиска.</p>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="container">
+                <h2>Результаты поиска:</h2>
+                <div id="searchResults">
+                    <!-- Здесь будут отображаться результаты поиска. Для демонстрации UI, показаны примеры. -->
+                    <!-- В реальном приложении эта часть будет динамически заполняться через JavaScript с помощью API. -->
+                    <div class="result-item">
+                        <h3><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%B5%D0%BF%D1%80%D0%B8%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5" target="_blank" rel="noopener noreferrer">Деепричастие — Википедия</a></h3>
+                        <p class="snippet">Деепричастие — особая форма глагола, обозначающая добавочное действие, сопутствующее основному действию, выраженному глаголом-сказуемым. Отвечает на вопросы «что делая?», «что сделав?»...</p>
+                        <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%B5%D0%BF%D1%80%D0%B8%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5" target="_blank" rel="noopener noreferrer" class="link-url">https://ru.wikipedia.org/wiki/Деепричастие</a>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h3><a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D0%B5%D1%87%D0%B8%D0%B5" target="_blank" rel="noopener noreferrer">Наречие — Википедия</a></h3>
+                        <p class="snippet">Наречие — неизменяемая часть речи, обозначающая признак действия, признак другого признака или признак предмета. Отвечает на вопросы «как?», «когда?», «где?», «куда?», «откуда?», «почему?», «зачем?», «в какой степени?»...</p>
+                        <a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D0%B5%D1%87%D0%B8%D0%B5" target="_blank" rel="noopener noreferrer" class="link-url">https://ru.wikipedia.org/wiki/Наречие</a>
+                    </div>
+
+                    <div class="result-item">
+                        <h3><a href="https://gramota.ru/spravka/rules/128-pravila-upotrebleniya-dee-i-narechiy" target="_blank" rel="noopener noreferrer">Правила употребления деепричастий и наречий - Грамота.ру</a></h3>
+                        <p class="snippet">Краткие и полные правила по использованию деепричастных оборотов и наречий в русском языке. Типичные ошибки и способы их избежания. Примеры из художественной литературы...</p>
+                        <a href="https://gramota.ru/spravka/rules/128-pravila-upotrebleniya-dee-i-narechiy" target="_blank" rel="noopener noreferrer" class="link-url">https://gramota.ru/spravka/rules/128-...</a>
+                    </div>
+                </div>
+                <div class="no-results" id="noResultsMessage" style="display: none;">
+                    <p>По вашему запросу ничего не найдено. Попробуйте изменить формулировку.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 ЛингвоПоиск. Все права защищены. <br>Этот сайт является демонстрацией пользовательского интерфейса. Функциональность поиска по всему интернету требует реализации на стороне сервера.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Простая имитация поиска на фронтенде
+        document.getElementById('searchButton').addEventListener('click', function() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const resultsContainer = document.getElementById('searchResults');
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            
+            // Скрываем все существующие результаты
+            const allResults = resultsContainer.querySelectorAll('.result-item');
+            allResults.forEach(item => item.style.display = 'none');
+
+            let found = false;
+
+            if (query.includes('деепричастия') || query.includes('деепричастие')) {
+                resultsContainer.querySelector('a[href*="Деепричастие"]').closest('.result-item').style.display = 'block';
+                found = true;
+            }
+            if (query.includes('наречия') || query.includes('наречие')) {
+                resultsContainer.querySelector('a[href*="Наречие"]').closest('.result-item').style.display = 'block';
+                found = true;
+            }
+            if (query.includes('правила') || query.includes('употребления') || query.includes('грамматика')) {
+                 resultsContainer.querySelector('a[href*="правила-употребления"]').closest('.result-item').style.display = 'block';
+                 found = true;
+            }
+
+            if (!found && query.trim() !== "") {
+                noResultsMessage.style.display = 'block';
+            } else {
+                noResultsMessage.style.display = 'none';
+            }
+            
+            if (query.trim() === "") { // Если поиск пустой, показываем все или скрываем все
+                allResults.forEach(item => item.style.display = 'block'); // Показываем все по умолчанию
+                noResultsMessage.style.display = 'none';
+            }
+        });
+
+        // Показываем все результаты при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            const resultsContainer = document.getElementById('searchResults');
+            const allResults = resultsContainer.querySelectorAll('.result-item');
+            allResults.forEach(item => item.style.display = 'block');
+        });
+    </script>
+</body>
+</html>
