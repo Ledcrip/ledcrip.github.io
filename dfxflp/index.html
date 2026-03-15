@@ -4,7 +4,275 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urban Brew - Больше чем кофе</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        /* Header */
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00bfff;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        #hero p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background-color: #00bfff;
+        }
+
+        /* Menu Section */
+        #menu {
+            background-color: #eee;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #menu h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .menu-item {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .menu-item p {
+            font-size: 1em;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        /* Hits Section */
+        #hits {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #hits h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .hits-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .hit-item {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .hit-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .hit-item h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .hit-item p {
+            font-size: 1em;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        /* Atmosphere Section */
+        #atmosphere {
+            background-color: #eee;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #atmosphere h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .atmosphere-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .atmosphere-container img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .atmosphere-container img:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Map Section */
+        #map {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #map h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .map-container {
+            margin-bottom: 20px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 8px;
+        }
+
+        .contact-info {
+            text-align: left;
+        }
+
+        .contact-info p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -26,26 +294,20 @@
             <p>Откройте для себя идеальный вкус и атмосферу в Urban Brew.  Мы предлагаем только лучшие сорта кофе и изысканные десерты.  Добро пожаловать в 2026 год кофейного совершенства.</p>
             <a href="#menu" class="button">Меню</a>
         </div>
-        <div class="hero-image">
-            <img src="coffee.jpg" alt="Кофе с паром">
-        </div>
     </section>
 
     <section id="menu">
         <h2>Наше меню</h2>
         <div class="menu-items">
             <div class="menu-item">
-                <img src="espresso.jpg" alt="Эспрессо">
                 <h3>Эспрессо</h3>
                 <p>Классический эспрессо, приготовленный из отборных зерен.</p>
             </div>
             <div class="menu-item">
-                <img src="raf.jpg" alt="Раф">
                 <h3>Раф</h3>
                 <p>Нежный раф-кофе с ванильным сиропом и молочной пенкой.</p>
             </div>
             <div class="menu-item">
-                <img src="croissant.jpg" alt="Круассан">
                 <h3>Круассан</h3>
                 <p>Свежий и хрустящий круассан, идеально подходит к кофе.</p>
             </div>
@@ -56,17 +318,14 @@
         <h2>Наши хиты</h2>
         <div class="hits-container">
             <div class="hit-item">
-                <img src="espresso.jpg" alt="Эспрессо">
                 <h3>Эспрессо</h3>
                 <p>Идеальный старт дня.</p>
             </div>
             <div class="hit-item">
-                <img src="raf.jpg" alt="Раф">
                 <h3>Раф</h3>
                 <p>Сладкое наслаждение.</p>
             </div>
             <div class="hit-item">
-                <img src="croissant.jpg" alt="Круассан">
                 <h3>Круассан</h3>
                 <p>Классика завтрака.</p>
             </div>
@@ -76,9 +335,9 @@
     <section id="atmosphere">
         <h2>Атмосфера Urban Brew</h2>
         <div class="atmosphere-container">
-            <img src="atmosphere1.jpg" alt="Интерьер кофейни">
-            <img src="atmosphere2.jpg" alt="Интерьер кофейни">
-            <img src="atmosphere3.jpg" alt="Интерьер кофейни">
+            <img src="https://via.placeholder.com/300x200?text=Atmosphere+1" alt="Интерьер кофейни">
+            <img src="https://via.placeholder.com/300x200?text=Atmosphere+2" alt="Интерьер кофейни">
+            <img src="https://via.placeholder.com/300x200?text=Atmosphere+3" alt="Интерьер кофейни">
         </div>
     </section>
 
@@ -95,7 +354,7 @@
     </section>
 
     <footer>
-        <p>Urban Brew - 2026.  Все права защищены.</p>
+        <p>Urban Brew</p>
     </footer>
 
 </body>
