@@ -1,0 +1,78 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Узоры и Расслабление</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Создайте свой уникальный узор</h1>
+        <p>Погрузитесь в мир красивых и расслабляющих узоров.</p>
+    </header>
+
+    <section id="patterns">
+        <h2>Примеры узоров</h2>
+        <div class="pattern-container">
+            <div class="pattern pattern1"></div>
+            <div class="pattern pattern2"></div>
+            <div class="pattern pattern3"></div>
+            <div class="pattern pattern4"></div>
+            <div class="pattern pattern5"></div>
+            <div class="pattern pattern6"></div>
+        </div>
+    </section>
+
+    <section id="create">
+        <h2>Создайте свой узор</h2>
+        <p>Здесь вы можете настроить параметры узора и увидеть результат в реальном времени.</p>
+        
+        <label for="color1">Цвет 1:</label>
+        <input type="color" id="color1" value="#FF5733">
+        <br>
+        <label for="color2">Цвет 2:</label>
+        <input type="color" id="color2" value="#3498DB">
+        <br>
+        <label for="size">Размер:</label>
+        <input type="range" id="size" min="50" max="200" value="100">
+        <span id="sizeValue">100px</span>
+        <br>
+        <div id="customPattern"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Узоры и Расслабление</p>
+    </footer>
+
+    <script>
+        const color1Input = document.getElementById('color1');
+        const color2Input = document.getElementById('color2');
+        const sizeInput = document.getElementById('size');
+        const sizeValueSpan = document.getElementById('sizeValue');
+        const customPatternDiv = document.getElementById('customPattern');
+
+        sizeInput.addEventListener('input', () => {
+            const size = sizeInput.value;
+            sizeValueSpan.textContent = size + 'px';
+            customPatternDiv.style.width = size + 'px';
+            customPatternDiv.style.height = size + 'px';
+        });
+
+        color1Input.addEventListener('input', () => {
+            customPatternDiv.style.backgroundColor = color1Input.value;
+        });
+
+        color2Input.addEventListener('input', () => {
+            customPatternDiv.style.backgroundColor = color2Input.value;
+        });
+
+        customPatternDiv.style.backgroundColor = color1Input.value;
+        customPatternDiv.style.width = sizeInput.value + 'px';
+        customPatternDiv.style.height = sizeInput.value + 'px';
+    </script>
+</body>
+</html>
+```
