@@ -1,0 +1,239 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #a38260;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-bg.jpg') center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #a38260;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #8a6b51;
+}
+
+/* Hits Section */
+.hits {
+    padding: 40px;
+    text-align: center;
+}
+
+.hits h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.hits-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hit {
+    width: 300px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hit img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.hit h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.hit p {
+    color: #666;
+}
+
+/* Atmosphere Section */
+.atmosphere {
+    padding: 40px;
+    text-align: center;
+}
+
+.atmosphere h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.atmosphere-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.atmosphere img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Map Section */
+.map {
+    padding: 40px;
+    text-align: center;
+}
+
+.map h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.map-container {
+    margin-bottom: 20px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+}
+
+.contacts {
+    text-align: left;
+}
+
+.contacts p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Медиа запросы (для адаптивности) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hits-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hit {
+        width: 80%;
+    }
+
+    .atmosphere-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .atmosphere img {
+        width: 80%;
+    }
+}
