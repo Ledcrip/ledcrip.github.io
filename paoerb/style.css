@@ -1,0 +1,169 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Стили заголовка */
+header {
+    background: linear-gradient(to right, #3498db, #8e44ad);
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: 3px solid #e8491d;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+/* Стили секции hero */
+#hero {
+    background: linear-gradient(to right, #e74c3c, #f39c12);
+    color: #fff;
+    padding: 50px 0;
+}
+
+#hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hero .hero-text {
+    width: 50%;
+}
+
+#hero .hero-text h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#hero .hero-image {
+    width: 40%;
+}
+
+#hero .hero-image img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Стили секции about */
+#about {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+#about .container {
+    text-align: center;
+}
+
+/* Стили секции portfolio */
+#portfolio {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+#portfolio .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+#portfolio .portfolio-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#portfolio .portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Стили секции skills */
+#skills {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+#skills .container {
+    text-align: center;
+}
+
+#skills ul {
+    padding: 0;
+    list-style: none;
+}
+
+#skills li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Стили секции contact */
+#contact {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+#contact .container {
+    text-align: center;
+}
+
+/* Стили футера */
+footer {
+    background: linear-gradient(to right, #3498db, #8e44ad);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
