@@ -3,354 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>КровавоеВино | bloodwin3</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* General Body & Typography */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212; /* Dark background */
-            color: #e0e0e0; /* Light text */
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        a {
-            color: #ff4d4d; /* Accent red for links */
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #ff8080;
-        }
-
-        h1, h2 {
-            font-weight: 700;
-            color: #ffffff; /* White for main titles */
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 3em;
-            text-align: center;
-            text-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
-        }
-
-        h2 {
-            font-size: 2.2em;
-            border-bottom: 2px solid #ff4d4d;
-            padding-bottom: 10px;
-            margin-top: 40px;
-            text-align: center;
-        }
-
-        /* Header (Hero Section) */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517457210348-b4724787cc6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80') center/cover no-repeat; /* Abstract dark image */
-            color: #fff;
-            padding: 100px 0;
-            text-align: center;
-            border-bottom: 3px solid #ff4d4d;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, rgba(255, 77, 77, 0.1) 0%, rgba(0,0,0,0) 70%);
-            opacity: 0.5;
-        }
-
-        .hero h1 {
-            font-size: 4em;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-            text-shadow: 0 0 15px #ff4d4d;
-        }
-
-        .hero p {
-            font-size: 1.5em;
-            font-weight: 300;
-            opacity: 0.9;
-        }
-
-        /* Main Content */
-        .content {
-            padding: 40px 0;
-        }
-
-        /* Social Links Section */
-        .social-links {
-            margin-bottom: 60px;
-        }
-
-        .links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .social-link {
-            background-color: #1e1e1e; /* Darker background for cards */
-            border: 1px solid #333;
-            border-radius: 12px;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .social-link::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 77, 77, 0.1) 0%, rgba(0,0,0,0) 70%);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            z-index: 0;
-        }
-
-        .social-link:hover::before {
-            opacity: 1;
-        }
-
-        .social-link:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-            border-color: #ff4d4d;
-        }
-
-        .social-link i {
-            font-size: 3.5em;
-            margin-bottom: 15px;
-            color: #ff4d4d; /* Accent red for icons */
-            transition: color 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-
-        .social-link:hover i {
-            color: #ff8080;
-        }
-
-        .social-link span {
-            font-size: 1.3em;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #e0e0e0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .social-link .username {
-            font-size: 1em;
-            color: #aaaaaa;
-            font-weight: 400;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Bio Info Section */
-        .bio-info {
-            margin-bottom: 60px;
-        }
-
-        .description-block {
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .description-block p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            color: #c0c0c0;
-        }
-
-        .description-line a {
-            font-weight: 600;
-        }
-
-        .event-dates {
-            margin-top: 25px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-        }
-
-        .event-dates p {
-            background-color: #2a2a2a;
-            border: 1px solid #444;
-            border-radius: 8px;
-            padding: 15px 25px;
-            font-size: 1em;
-            color: #e0e0e0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-        }
-
-        .event-dates p span {
-            font-weight: 600;
-            color: #ff4d4d;
-            margin-bottom: 5px;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #0d0d0d; /* Even darker footer */
-            color: #888;
-            text-align: center;
-            padding: 25px 0;
-            border-top: 2px solid #ff4d4d;
-            font-size: 0.9em;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5em;
-            }
-
-            h2 {
-                font-size: 1.8em;
-            }
-
-            .hero {
-                padding: 80px 0;
-            }
-
-            .hero h1 {
-                font-size: 3em;
-            }
-
-            .hero p {
-                font-size: 1.2em;
-            }
-
-            .links-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .social-link {
-                padding: 20px;
-            }
-
-            .social-link i {
-                font-size: 3em;
-            }
-
-            .social-link span {
-                font-size: 1.2em;
-            }
-
-            .description-block {
-                padding: 20px;
-            }
-
-            .event-dates p {
-                padding: 12px 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2em;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-
-            .hero {
-                padding: 60px 0;
-            }
-
-            .hero h1 {
-                font-size: 2.5em;
-            }
-
-            .hero p {
-                font-size: 1em;
-            }
-        }
-    </style>
+    <title>Кровавое Вино</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="hero">
+    <header>
         <div class="container">
-            <h1>КровавоеВино</h1>
-            <p>Добро пожаловать в мир КровавогоВина.</p>
+            <h1>Кровавое Вино</h1>
+            <p>| t.me/shidzuke << t.me/xiwaw | #0983</p>
         </div>
     </header>
 
-    <main class="content">
+    <section class="hero">
         <div class="container">
-            <section class="social-links">
-                <h2>Связь со мной</h2>
-                <div class="links-grid">
-                    <a href="https://t.me/bloodwin3" target="_blank" class="social-link">
-                        <i class="fab fa-telegram-plane"></i>
-                        <span>Telegram (личный)</span>
-                        <span class="username">@bloodwin3</span>
-                    </a>
-                    <a href="https://t.me/xiwaw" target="_blank" class="social-link">
-                        <i class="fab fa-telegram"></i>
-                        <span>Telegram (канал)</span>
-                        <span class="username">@xiwaw</span>
-                    </a>
-                </div>
-            </section>
-
-            <section class="bio-info">
-                <h2>Обо мне</h2>
-                <div class="description-block">
-                    <p class="description-line">
-                        <a href="https://t.me/shidzuke" target="_blank">t.me/shidzuke</a> &lt;&lt; <a href="https://t.me/xiwaw" target="_blank">t.me/xiwaw</a> | #0983
-                    </p>
-                    <div class="event-dates">
-                        <p><span>Лив с комьюнити:</span> 25.11.25</p>
-                        <p><span>КровавоеВино:</span> 07.01.26</p>
-                        <p><span>СиндромБога:</span> 30.09.25</p>
-                    </div>
-                </div>
-            </section>
+            <h2>О себе</h2>
+            <p>Привет! Я Кровавое Вино. Здесь вы найдете информацию обо мне и моих проектах.</p>
+            <div class="links">
+                <a href="https://t.me/bloodwin3" target="_blank">Telegram: @bloodwin3</a>
+                <a href="https://t.me/xiwaw" target="_blank">Telegram Канал: t.me/xiwaw</a>
+            </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="footer">
+    <section class="events">
         <div class="container">
-            <!-- Текст копирайта удален согласно запросу -->
+            <h2>Важные даты</h2>
+            <ul>
+                <li>Лив с комьюнити - 25.11.25</li>
+                <li>КровавоеВино - 07.01.26</li>
+                <li>СиндромБога - 30.09.25</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Кровавое Вино</p>
         </div>
     </footer>
 </body>
