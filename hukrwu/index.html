@@ -1,0 +1,137 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover America</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" alt="USA Flag">
+            <h1>Discover America</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#states">States</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#travel">Travel</a></li>
+                <li><a href="#create">Create Your Trip</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to the United States of America</h2>
+            <p>Explore the diverse landscapes, vibrant cities, and rich history of the USA.</p>
+            <a href="#travel" class="cta-button">Start Exploring</a>
+        </div>
+    </section>
+
+    <section id="states" class="states">
+        <h2>Explore the States</h2>
+        <div class="states-grid">
+            <div class="state-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/California_State_Flag.svg/1200px-California_State_Flag.svg.png" alt="California">
+                <h3>California</h3>
+                <p>The Golden State, known for its beaches, Hollywood, and tech industry.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="state-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Flag_of_New_York.svg/1200px-Flag_of_New_York.svg.png" alt="New York">
+                <h3>New York</h3>
+                <p>The Empire State, home to New York City, a global center for finance and culture.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="state-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Texas.svg/1200px-Flag_of_Texas.svg.png" alt="Texas">
+                <h3>Texas</h3>
+                <p>The Lone Star State, known for its vast landscapes, cowboy culture, and oil industry.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="state-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Florida.svg/1200px-Flag_of_Florida.svg.png" alt="Florida">
+                <h3>Florida</h3>
+                <p>The Sunshine State, famous for its beaches, theme parks, and warm climate.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="culture" class="culture">
+        <h2>American Culture</h2>
+        <div class="culture-content">
+            <div class="culture-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Jazz_musicians_New_Orleans.jpg/800px-Jazz_musicians_New_Orleans.jpg" alt="Jazz Music">
+                <h3>Music</h3>
+                <p>From jazz and blues to rock and roll and hip-hop, American music has influenced the world.</p>
+            </div>
+            <div class="culture-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/American_cuisine.jpg/800px-American_cuisine.jpg" alt="American Cuisine">
+                <h3>Cuisine</h3>
+                <p>American cuisine is a melting pot of flavors, from burgers and fries to regional specialties.</p>
+            </div>
+            <div class="culture-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Broadway_Times_Square_New_York_City.jpg/800px-Broadway_Times_Square_New_York_City.jpg" alt="Broadway">
+                <h3>Arts & Entertainment</h3>
+                <p>Broadway shows, Hollywood movies, and world-class museums are just a few of the entertainment options.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="history" class="history">
+        <h2>A Brief History</h2>
+        <p>The United States has a rich and complex history, from its colonial beginnings to its rise as a global superpower.</p>
+        <a href="#" class="learn-more-button">Explore the History</a>
+    </section>
+
+    <section id="travel" class="travel">
+        <h2>Plan Your Trip</h2>
+        <div class="travel-options">
+            <div class="travel-option">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Grand_Canyon_National_Park.jpg/800px-Grand_Canyon_National_Park.jpg" alt="Grand Canyon">
+                <h3>National Parks</h3>
+                <p>Explore the stunning natural beauty of America's national parks.</p>
+            </div>
+            <div class="travel-option">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/New_York_City_skyline_from_Top_of_the_Rock.jpg/800px-New_York_City_skyline_from_Top_of_the_Rock.jpg" alt="New York City">
+                <h3>City Breaks</h3>
+                <p>Experience the energy and excitement of America's vibrant cities.</p>
+            </div>
+            <div class="travel-option">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Miami_Beach.jpg/800px-Miami_Beach.jpg" alt="Miami Beach">
+                <h3>Beach Getaways</h3>
+                <p>Relax and soak up the sun on America's beautiful beaches.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="create" class="create-trip">
+        <h2>Create Your Dream Trip</h2>
+        <form>
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination">
+
+            <label for="dates">Dates:</label>
+            <input type="date" id="dates" name="dates">
+
+            <label for="budget">Budget:</label>
+            <input type="number" id="budget" name="budget">
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Discover America. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+```
