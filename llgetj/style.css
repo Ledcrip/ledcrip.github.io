@@ -1,0 +1,201 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header .logo {
+    float: left;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(to right, #4CAF50, #2196F3);
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#hero .hero-text {
+    float: left;
+    width: 60%;
+    padding-right: 20px;
+}
+
+#hero .hero-image {
+    float: right;
+    width: 40%;
+}
+
+#hero .hero-image img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#hero .button {
+    background: #fff;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* About Section */
+#about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Portfolio Section */
+#portfolio {
+    background: #fff;
+    padding: 50px 0;
+}
+
+#portfolio h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.portfolio-item {
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Services Section */
+#services {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#services ul {
+    list-style: none;
+    padding: 0;
+}
+
+#services li {
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact {
+    background: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header .logo,
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav ul {
+        text-align: center;
+    }
+
+    #hero .hero-text,
+    #hero .hero-image {
+        float: none;
+        width: 100%;
+    }
+
+    #hero .hero-image img {
+        border-radius: 0;
+    }
+}
