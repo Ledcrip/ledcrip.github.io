@@ -4,7 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Современный сайт</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+        }
+
+        header h1 {
+            float: left;
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        header nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        header nav li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1507033749978-9993a3429999?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJufGVufDB8fDB8fHx8MA%3D%3D&w=1000&q=80') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            background: #e44d26;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .features {
+            background: #fff;
+            padding: 50px 0;
+        }
+
+        .feature {
+            float: left;
+            width: 30%;
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Add some hover effects */
+        header nav a:hover {
+            color: #ff0;
+        }
+
+        .button:hover {
+            background: #d43d18;
+        }
+
+        .feature:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Pepe, Gazan, 67 */
+        .pepe {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-image: url('https://i.kym-cdn.com/entries/icons/original/000/022/940/pepe.jpg');
+            background-size: cover;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .gazan {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Gazan_man_with_a_traditional_Palestinian_keffiyeh.jpg/800px-Gazan_man_with_a_traditional_Palestinian_keffiyeh.jpg');
+            background-size: cover;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .sixtyseven {
+            font-size: 2em;
+            color: #e44d26;
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -27,6 +169,9 @@
             <h2>Привет! Это современный сайт.</h2>
             <p>Описание сайта. Здесь можно разместить информацию о вашей компании или проекте.</p>
             <a href="#" class="button">Узнать больше</a>
+            <div class="pepe"></div>
+            <div class="gazan"></div>
+            <div class="sixtyseven">67</div>
         </div>
     </section>
 
@@ -49,7 +194,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Все права защищены.</p>
+            <p>Все права защищены.</p>
         </div>
     </footer>
 
