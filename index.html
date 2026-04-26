@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Язык программирования XUX</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:20px;line-height:1.6;color:#fff;background:#1a1a2e}
+        h1{font-size:2em;margin:20px 0}
+        h2{font-size:1.5em;margin:15px 0;color:#0ff}
+        h3{font-size:1.2em;margin:10px 0;color:#0f0}
+        p{margin:8px 0}
+        ul{padding-left:20px;margin:8px 0}
+        li{margin:4px 0;font-size:0.95em}
+        pre{background:#1e1e1e;color:#0f0;padding:12px;border-radius:8px;overflow:auto;font-size:13px;margin:10px 0}
+        hr{border:1px solid #555;margin:20px 0}
+        .center{text-align:center}
+        .main-text{background:rgba(255,255,255,0.1);padding:20px;border-radius:16px;margin:10px 0;font-size:1em}
+        code{color:#0f0}
+    </style>
+</head>
+<body>
 
+<div class="center">
+    <h1>XUX Language Specification v3.0</h1>
+    <div class="main-text">
+        <p>XUX — высокоуровневый интерпретируемый язык. Ядро на C + JS биндинги. Работает в браузере без установки. Создан ledcrip. Открытый код. 260+ команд.</p>
+    </div>
+</div>
+
+<hr>
+
+<h2>Базовый синтаксис</h2>
+<p>Одна строка — одна команда. Комментарии: <code>#</code> или <code>//</code>. Команды в нижнем регистре. Аргументы через пробел. Строки в двойных кавычках.</p>
+<p><b>Типы данных:</b> Number (42, 3.14), String ("привет"), Boolean (true/false, yes/no), Array [1,2,3], Object {key:val}, Null.</p>
+<p><b>Переменные:</b> <code>let x=10</code>, <code>give y=20</code>, <code>set z=30</code>, <code>name="вася"</code>. Глобальная область видимости.</p>
+
+<hr>
+
+<h2>Вывод и ввод</h2>
+<p><code>show "привет"</code> — вывод в консоль (синонимы: p, print, ?).</p>
+<p><code>input "имя?"</code> — модальное окно ввода. <code>input "возраст?" → age</code> — сохраняет в переменную.</p>
+
+<hr>
+
+<h2>Условия и циклы</h2>
+<p><code>if x>10 then show "много"</code> — условие. Операторы: =, &lt;&gt;, &gt;, &lt;, &gt;=, &lt;=.</p>
+<p><code>loop ... end</code> — бесконечный цикл. <code>stop/end/exit</code> — выход.</p>
+<p><code>wait 1</code> — пауза в секундах (sleep, delay).</p>
+<p><code>random 1 10 x</code> — случайное число (rnd, rand).</p>
+
+<hr>
+
+<h2>Графика</h2>
+<p><code>canvas</code> — открыть холст 400x400. <code>color red</code> — выбрать цвет.</p>
+<p><code>rect x y w h</code> — прямоугольник. <code>circle x y r</code> — круг. <code>line x1 y1 x2 y2</code> — линия.</p>
+<p><code>text x y "текст"</code> — текст. <code>pixel x y</code> — точка. <code>clearcanvas</code> — очистить. <code>closedraw</code> — закрыть.</p>
+<p>Цвета: red, green, blue, white, black, yellow, cyan, magenta, orange, pink, purple, gray, #ff0000.</p>
+
+<hr>
+
+<h2>Звук и речь</h2>
+<p><code>beep 440 0.5</code> — сигнал (частота, сек). <code>bip</code> — синоним.</p>
+<p><code>tone C4 0.5</code> — нота. Ноты: C4 D4 E4 F4 G4 A4 B4 C5.</p>
+<p><code>volume 50</code> — громкость 0-100. <code>soundlevel</code> — уровень шума.</p>
+<p><code>speech "текст"</code> — озвучка голосом (русский). <code>speechrecognize</code> — распознавание речи.</p>
+
+<hr>
+
+<h2>Камера и медиа</h2>
+<p><code>snap</code> — открыть камеру. <code>rec 5</code> — запись аудио (сек). <code>recvideo 10</code> — запись видео.</p>
+<p><code>gallery</code> — выбрать фото. <code>play "файл"</code> — воспроизвести аудио.</p>
+
+<hr>
+
+<h2>GPS и сенсоры</h2>
+<p><code>loc</code> — координаты. <code>loc → lat lon</code> — сохранить.</p>
+<p><code>nearby кафе</code> — поиск мест рядом. <code>dist lat1 lon1 lat2 lon2</code> — расстояние в метрах.</p>
+<p><code>address</code> — адрес по координатам. <code>compass</code> — компас (N/S/E/W).</p>
+<p><code>accel</code> — акселерометр. <code>gyro</code> — гироскоп. <code>shake</code> — детектор тряски.</p>
+<p><code>vibrate 500</code> — вибрация (мс). <code>light</code> — освещённость. <code>temp</code> — температура.</p>
+<p><code>humidity</code> — влажность. <code>pressure</code> — давление. <code>proximity</code> — датчик приближения.</p>
+
+<hr>
+
+<h2>Сеть и файлы</h2>
+<p><code>http@get "url" → data</code> — GET запрос. <code>http@post "url" "data"</code> — POST.</p>
+<p><code>fetch@json "url"</code> — получить JSON. <code>download "url" "имя"</code> — скачать файл.</p>
+<p><code>file@save "путь" "текст"</code> — создать файл. <code>file@read "путь"</code> — читать. <code>file@delete "путь"</code> — удалить.</p>
+<p><code>file@list</code> — список файлов. <code>file@clear</code> — очистить всё.</p>
+<p><code>mem@set "к" "з"</code> — сохранить в память. <code>mem@get "к"</code> — читать. <code>mem@del "к"</code> — удалить.</p>
+<p><code>db@insert тбл данные</code> — вставить запись. <code>db@select тбл</code> — выбрать все.</p>
+
+<hr>
+
+<h2>Система</h2>
+<p><code>battery</code> — заряд. <code>ram</code> — память. <code>cpu</code> — процессор. <code>disk</code> — диск.</p>
+<p><code>uptime</code> — время работы. <code>wifi</code> — сети. <code>online</code> — интернет. <code>ip</code> — IP адрес.</p>
+<p><code>date</code> — дата. <code>time</code> — время. <code>version</code> — версия. <code>help</code> — справка.</p>
+<p><code>clear_console</code> — очистить консоль. <code>clipboard</code> — буфер обмена.</p>
+
+<hr>
+
+<h2>Диалоги</h2>
+<p><code>confirm "вопрос?" → ответ</code> — Yes/No окно. <code>choose "а" "б" "в" → выбор</code> — меню выбора.</p>
+<p><code>alert "текст"</code> — уведомление.</p>
+
+<hr>
+
+<h2>Строки и математика</h2>
+<p><code>upper</code>, <code>lower</code>, <code>trim</code>, <code>replace</code>, <code>reverse</code>, <code>sort</code> — операции со строками.</p>
+<p><code>round</code>, <code>floor</code>, <code>ceil</code>, <code>abs</code>, <code>sqrt</code>, <code>pow</code>, <code>sin</code>, <code>cos</code> — математика.</p>
+<p><code>sum</code>, <code>avg</code>, <code>min</code>, <code>max</code>, <code>len</code>, <code>push</code>, <code>pop</code> — работа со списками.</p>
+
+<hr>
+
+<h2>Создание сайтов</h2>
+<p><code>title "имя"</code>, <code>bg цвет</code>, <code>tc цвет</code>, <code>font "шрифт"</code> — настройки страницы.</p>
+<p><code>h1/h2/h3 "текст"</code> — заголовки. <code>p "текст"</code> — параграф. <code>btn цвет "текст"</code> — кнопка.</p>
+<p><code>img "url"</code> — картинка. <code>link "url" "текст"</code> — ссылка.</p>
+<p><code>card... /card</code> — карточка. <code>center... /center</code> — по центру. <code>list... /list</code> — список.</p>
+<p><code>nav... /nav</code> — навигация. <code>cols... /cols</code> — колонки. <code>hr</code> — линия. <code>br</code> — перенос.</p>
+<p><code>code "код"</code> — отображение кода. <code>badge цв "т"</code> — бирка. <code>icon эмодзи</code> — иконка.</p>
+<p>Кнопка <b>site</b> публикует сайт на wedsite.sytes.net.</p>
+
+<hr>
+
+<h2>Стрелка →</h2>
+<p><code>команда → переменная</code> — сохраняет результат. Пример: <code>loc → lat lon</code>.</p>
+
+<hr>
+
+<div class="center">
+    <p>XUX v3.0. 26 апреля 2026. Создатель: ledcrip. 260+ команд.</p>
+</div>
+
+</body>
+  </html>
